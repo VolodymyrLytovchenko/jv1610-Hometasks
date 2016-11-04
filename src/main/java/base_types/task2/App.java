@@ -1,4 +1,4 @@
-package jv1610.hometasks.base_types.task2;
+package base_types.task2;
 
 /**
  *

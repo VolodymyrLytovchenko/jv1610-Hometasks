@@ -1,4 +1,4 @@
-package basic_constructions;
+package basic_constructions.task1;
 
 /**
  *

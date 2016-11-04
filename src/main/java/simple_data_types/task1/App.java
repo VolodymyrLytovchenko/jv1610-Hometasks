@@ -1,4 +1,4 @@
-package jv1610.hometasks.simple_data_types.task1;
+package simple_data_types.task1;
 
 /**
  *
