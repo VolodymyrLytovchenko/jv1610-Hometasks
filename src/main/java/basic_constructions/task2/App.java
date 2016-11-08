@@ -10,85 +10,77 @@ package basic_constructions.task2;
  */
 public class App {
     public static void main(String[] args) {
-        int value = 15;
+        int value = 47;
+        System.out.println(getStringFromNumber(value));
+    }
         
+    static String getStringFromNumber(int value){
         if(value < 10){
-            getOneDigitPresentation(value);
-        }else{
-            getTwoDigitPresentation(value);
+            return getOneDigitPresentation(value);
         }
+        if(value>10 && value<20){
+            return getTwoDigitPresentation1(value);
+        }
+ 
+        if(value>20 && value<=99){
+            return getTwoDigitPresentation2(value);
+        }
+        return getStringFromNumber(value);
     }
       
     static String getOneDigitPresentation (int value){
         switch (value){
-            case 0:{
-               System.out.println("ноль");
-            }break;
-            case 1:{
-                System.out.println("один");
-            }break;
-            case 2:{
-                System.out.println("два");
-            }break;
-            case 3:{
-                System.out.println("три");
-            }break;
-            case 4:{
-                System.out.println("четыре");
-            }break;
-            case 5:{
-                System.out.println("пять");
-            }break;
-            case 6:{
-                System.out.println("шесть");
-            }break;
-            case 7:{
-                System.out.println("семь");
-            }break;
-            case 8:{
-                System.out.println("восемь");
-            }break;
-            case 9:{
-                System.out.println("девять");
-            }break;     
+            case 0:
+               return "ноль";
+            case 1:
+               return "один";
+            case 2:
+                return "два";
+            case 3:
+                return "три";
+            case 4:
+                return "четыре";
+            case 5:
+                return "пять";
+            case 6:
+                return "шесть";
+            case 7:
+                return "семь";
+            case 8:
+                return "восемь";
+            case 9:
+                return "девять";   
         }
-        return null;
+        return getOneDigitPresentation(value);
     }
     
-    static String getTwoDigitPresentation(int value){
+    static String getTwoDigitPresentation1(int value){
         switch (value){
-                case 10:{
-                    System.out.println("десять");
-                }break;
-                case 11:{
-                    System.out.println("одинадцать");
-                }break;
-                case 12:{
-                    System.out.println("двенадцать");
-                }break;
-                case 13:{
-                    System.out.println("тринадцать");
-                }break;
-                case 14:{
-                    System.out.println("четырнадцать");
-                }break;
-                case 15:{
-                    System.out.println("пятнадцать");
-                }break;
-                case 16:{
-                    System.out.println("шестнадцать");
-                }break;
-                case 17:{
-                    System.out.println("семнадцать");
-                }break;
-                case 18:{
-                    System.out.println("восемнадцать");
-                }break;
-                case 19:{
-                    System.out.println("девятнадцать");
-                }break;
+                case 10:
+                    return "десять";
+                case 11:
+                    return "одинадцать";
+                case 12:
+                    return "двенадцать";
+                case 13:
+                    return "тринадцать";
+                case 14:
+                    return "четырнадцать";
+                case 15:
+                    return "пятнадцать";
+                case 16:
+                    return "шестнадцать";
+                case 17:
+                    return "семнадцать";
+                case 18:
+                    return "восемнадцать";
+                case 19:
+                    return "девятнадцать";
             }
+        return getTwoDigitPresentation1(value);
+    }
         
+        static String getTwoDigitPresentation2(int value){
         int firstDigit = value / 10; // целая часть от деления на десять
         int secondDigit = value % 10; // остаток от деления на десять
         
