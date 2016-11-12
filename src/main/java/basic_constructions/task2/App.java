@@ -10,7 +10,7 @@ package basic_constructions.task2;
  */
 public class App {
     public static void main(String[] args) {
-        int value = 47;
+        int value = 87;
         System.out.println(getStringFromNumber(value));
     }
         
@@ -49,9 +49,9 @@ public class App {
             case 8:
                 return "восемь";
             case 9:
-                return "девять";   
+                return "девять";
         }
-        return getOneDigitPresentation(value);
+        return "ноль";
     }
     
     static String getTwoDigitPresentation1(int value){
@@ -77,7 +77,7 @@ public class App {
                 case 19:
                     return "девятнадцать";
             }
-        return getTwoDigitPresentation1(value);
+        return "ноль";
     }
         
         static String getTwoDigitPresentation2(int value){
@@ -87,21 +87,29 @@ public class App {
         String totalString = "";
         switch (firstDigit){
             case 2:
-                totalString = "двадцать";
+                totalString = "двадцать  ";
+                break;
             case 3:
-                totalString = "тридцать";
+                totalString = "тридцать ";
+                break;
             case 4:
-                totalString = "сорок";
+                totalString = "сорок  ";
+                break;
             case 5:
-                totalString = "пятьдесят";
+                totalString = "пятьдесят  ";
+                break;
             case 6:
-                totalString = "шестьдесят";
+                totalString = "шестьдесят ";
+                break;
             case 7:
-                totalString = "семьдесят";
+                totalString = "семьдесят ";
+                break;
             case 8:
-                totalString = "восемьдесят";
+                totalString = "восемьдесят ";
+                break;
             case 9:
-                totalString = "девяносто";
+                totalString = "девяносто ";
+                break;
         }
         if(secondDigit !=0){
         totalString +="" + getOneDigitPresentation(secondDigit);
